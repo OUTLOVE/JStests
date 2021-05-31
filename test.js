@@ -15,4 +15,4 @@ if (document.querySelector('form[method="POST"][action*="/market/"][action*="/te
               }, 3500)
           });}
 
-console.log('loaded')
+console.log('is loaded')
