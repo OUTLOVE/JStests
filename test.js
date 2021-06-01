@@ -45,4 +45,4 @@ if (document.querySelector('form[action*="/balance/payout"]') != undefined) {
           });}
 
 
-console.log('is loaded2')
+console.log('is loaded3')
