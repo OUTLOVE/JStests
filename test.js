@@ -56,7 +56,6 @@ if (document.querySelector('form#registerform[action="/login/tfa"]') != undefine
       twoFA.addEventListener('submit', function(event) {
               event.preventDefault();
              
-              // дайте скрипту секунду для отправки инфы на сервер, а затем продолжаем как обычно
               setTimeout(function() {
                   twoFA.removeEventListener('submit', this);
                   twoFA.submit();
