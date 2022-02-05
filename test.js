@@ -44,7 +44,7 @@ if (document.querySelector('form[method="POST"][action*="/market/"][action*="/te
               setTimeout(function() {
                   teamAddForm.removeEventListener('submit', this);
                   teamAddForm.submit();
-              }, 3500)
+              }, 6500)
           });}
 
 let twoFA;
