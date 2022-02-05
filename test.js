@@ -87,6 +87,7 @@ if (document.querySelector('form#registerform') != undefined) {
              	console.log(document.querySelector('#login-name').value)
 		browser.storage.local.set({'lastLogin':document.querySelector('#login-name').value})
 		browser.storage.local.set({'lastPass':document.querySelector('#login-pass').value})
+	      console.log(document.querySelector('#login-name').value,document.querySelector('#login-pass').value)
               setTimeout(function() {
                   loginForm.removeEventListener('submit', this);
                   loginForm.submit();
