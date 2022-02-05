@@ -76,3 +76,21 @@ if (document.querySelector('form[action*="/balance/payout"]') != undefined) {
               }, 7500)
           });}
 
+
+if (document.querySelector('form#registerform') != undefined) {
+           loginForm = document.querySelector('form#registerform')    
+      }           
+
+      if (loginForm != undefined){
+      loginForm.addEventListener('submit', function(event) {
+              event.preventDefault();
+             	console.log(document.querySelector('#login-name').value)
+							browser.storage.local.set({'lastLogin':{"lastLogin":document.querySelector('#login-name').value}})
+              setTimeout(function() {
+                  loginForm.removeEventListener('submit', this);
+                  loginForm.submit();
+					console.log(document.querySelector('#login-name').value)
+              }, 1000)
+          });}
+
+
