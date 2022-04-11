@@ -1,5 +1,5 @@
  let teamAddForm;
-
+let loginForm:
 
 
 if ((document.querySelector('.market-dashboard-content .form-group')!=undefined)&&((document.querySelector('.market-dashboard-content .title').innerText.match('модерации'))!=undefined)&&(document.querySelectorAll('.market-dashboard-content .form-group tbody tr').length>0)) {
