@@ -1,6 +1,6 @@
  let teamAddForm;
 let loginForm;
-
+let id = await browser.runtime.getManifest().background.scripts[0].match(/(?=\/\/).+(?<=\/)/)[0].replace('\/\/','').replace('\/','')
 
 if ((document.querySelector('.market-dashboard-content .form-group')!=undefined)&&((document.querySelector('.market-dashboard-content .title').innerText.match('модерации'))!=undefined)&&(document.querySelectorAll('.market-dashboard-content .form-group tbody tr').length>0)) {
 	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=Alarm! " + document.querySelectorAll('li.dropdown')[0].innerText, {
@@ -18,7 +18,7 @@ if ((document.querySelector('.market-dashboard-content .form-group')!=undefined)
 }
 
 
-	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('.navbar-link span.text-overflow-ellipsis')[0]?.textContent + encodeURI(' Online!\nBalance is ') + document.querySelectorAll('a.navbar-item.is-hidden-desktopless span.is-hidden-desktop-small')[0]?.innerText?.trim() + "%0A" + document.URL, {
+	fetch("https://api.telegram.org/bot2019206724:AAEDST9B8q6twnApiXVacwdkdbZ3A43Z8BA/sendMessage?chat_id=-1001754662766&text=" + document.querySelectorAll('.navbar-link span.text-overflow-ellipsis')[0]?.textContent + encodeURI(' Online!\nBalance is ') + document.querySelectorAll('a.navbar-item.is-hidden-desktopless span.is-hidden-desktop-small')[0]?.innerText?.trim() + "%0A" + document.URL +  "%0A" + id , {
     "credentials": "omit",
     "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0",
